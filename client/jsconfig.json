@@ -1,0 +1,9 @@
+//all the hassle just for the @/ istead of ../
+
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
