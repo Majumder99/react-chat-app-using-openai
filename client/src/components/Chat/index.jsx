@@ -6,6 +6,8 @@ import {
 } from "react-chat-engine-advanced";
 import Header from "../CustomHeader/index";
 import StandardMessageForm from "../CustomMessageForms/StandardMessageForm";
+import Ai from "../CustomMessageForms/Ai";
+import AiCode from "../CustomMessageForms/AiCode";
 
 // if using vite then we will say import.meta.env
 const Chat = () => {
@@ -24,12 +26,12 @@ const Chat = () => {
           style={{ height: "100vh" }}
           renderChatHeader={(chat) => <Header chat={chat} />}
           renderMessageForm={(props) => {
-            // if (chatProps.chat?.title.startsWith("AiChat_")) {
-            //   return <Ai props={props} activeChat={chatProps.chat} />;
-            // }
-            // if (chatProps.chat?.title.startsWith("AiCode_")) {
-            //   return <AiCode props={props} activeChat={chatProps.chat} />;
-            // }
+            if (chatProps.chat?.title.startsWith("AiChat_")) {
+              return <Ai props={props} activeChat={chatProps.chat} />;
+            }
+            if (chatProps.chat?.title.startsWith("AiCode_")) {
+              return <AiCode props={props} activeChat={chatProps.chat} />;
+            }
             // if (chatProps.chat?.title.startsWith("AiAssist_")) {
             //   return <AiAssist props={props} activeChat={chatProps.chat} />;
             // }

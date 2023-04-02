@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Chat from "@/components/Chat";
+import Chat from "./components/Chat";
 
 function App() {
   return (
